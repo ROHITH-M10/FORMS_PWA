@@ -34,6 +34,7 @@ function App() {
       />
       <Home 
           openDropdown={openDropdown}
+          setOpenDropdown ={setOpenDropdown}
           toggleDropdown={toggleDropdown}
           handleSelect={handleSelect}
           selectedUrl={selectedUrl}

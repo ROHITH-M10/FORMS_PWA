@@ -4,118 +4,19 @@ import Footer from "./Footer";
 import Guest from "./Guest";
 import Sample_Image_1 from "../../public/images/sample_image_amrita_1.jpg";
 import Sample_Image_2 from "../../public/images/sample_image_amrita_2.jpg";
-// import servers from "../data/servers.json";
 
 function Home({
-  // handleGuest, 
-  // isModalVisible, 
-  // setIsModalVisible, 
-  // setAdminUrl, 
-  openDropdown, 
+  openDropdown,
   toggleDropdown, 
   handleSelect, 
   selectedUrl, 
-  // selectedServerOption, 
-  // setSelectedServerOption, 
-  // saveServerSelection
 }) {
-
-
-// // Check localStorage on mount
-// useEffect(() => {
-//   const guestStatus = localStorage.getItem("guestUser");
-//   console.log("Guest Status: ", guestStatus);
-//   if (!guestStatus && isModalVisible === true) {
-//     console.log("Modal visibility on");
-//     setIsModalVisible(true); // Show modal if no selection is saved
-//   }
-//   else {
-//     console.log("Modal visibility off");
-//     setIsModalVisible(false); // Hide modal if selection is saved
-//   }
-  
-// }, []);
-
-// const servers = {
-//   "Metaflo": "https://research.amritahospitals.org/",
-//   "AIMS Metaflo": "https://research-int.amritahospitals.org/",
-//   "L1-Staging-Metaflo": "http://test-ahis-l1.amrita.edu/"
-// }
-
-  // Handle Server Selection from localStorage
-  // useEffect(() => {
-  //   const server = localStorage.getItem("server");
-  //   console.log("Server Selected: ", server);
-  //   console.log("Modal popup: ", isModalVisible);
-  //   if (!server && isModalVisible === false) {
-  //     console.log("Modal visibility setting to off since next will be second time");
-  //     setIsModalVisible(false); // Show modal if no selection is saved
-  //   }
-  //   else {
-  //     if (!server) {
-  //       setAdminUrl(servers[selectedServerOption]);
-  //       setSelectedServerOption(selectedServerOption);
-  //       console.log("Server selection saved: ", selectedServerOption);
-
-  //     }
-  //     else {
-  //       if (server && selectedServerOption !== server && isModalVisible === false) {
-  //         setAdminUrl(servers[selectedServerOption]);
-  //         setSelectedServerOption(selectedServerOption);
-
-  //       }
-  //       else{
-  //     console.log("Modal visibility off");
-  //     console.log("Modal visibility", isModalVisible);
-  //     console.log("Server selection saved: ", server);
-  //     setIsModalVisible(false); // Hide modal if selection is saved
-  //     setAdminUrl(servers[server]);
-  //     setSelectedServerOption(server);
-  //     console.log("Server selection saved: ", server);
-  //     console.log("Admin URL: ", servers[server]);
-  //     // update server
-  //       }
-  //     }
-
-  //   }
-
-  // }, []);
-
-
-  
-
-  // Handle Guest Selection
-  // const handleGuestSelection = () => {
-  //   handleGuest(); // Call guest function
-  //   setIsModalVisible(false); // Close
-  // };
-
-  // // Save Guest Selection
-  // const saveGuestSelection = () => {
-  //   console.log("Guest Data Saved");
-  //   localStorage.setItem("guestUser", true); // Save guest selection
-  //   setIsModalVisible(false); // Close modal
-  //   handleGuest(); // Call guest function
-  // };
 
 
 
   return (
     <div className="home-page">
-      {/* Modal for first-time login */}
-      {/* <Modal 
-        open={isModalVisible}
-        onCancel={() => setIsModalVisible(false)}
-        footer={null}
-        centered
-      >
-        <p className="modal-text">Select your preferred server</p>
-        <div className="modal-button-container">
-          <button className="modal-metaflo-button" onClick={saveServerSelection("Web Forms")}>Web Forms</button>
-          <button className="modal-aims-metaflo-button" onClick={saveServerSelection("Registries")}>Registries</button>
-          <button className="modal-l1-test-button" onClick={saveServerSelection("Staging / Test")}>Staging / Test</button>
-        </div>
-      </Modal> */}
+      
 
       {/* Main Image */}
       <div className="main-image">
@@ -148,12 +49,6 @@ function Home({
           <img src={Sample_Image_2} alt="Sample 2" className="carousel-image" />
         </div>
       </Carousel>
-
-      {/* Buttons */}
-      {/* <div className="home-button-container">
-        <button className="login-button" onClick={handleLogin}>Login</button>
-        <button className="guest-button" onClick={handleGuestSelection}>Continue as Guest</button>
-      </div> */}
 
 
       <Guest
