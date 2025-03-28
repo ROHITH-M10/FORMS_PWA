@@ -91,7 +91,7 @@ function Home({handleGuest, isModalVisible, setIsModalVisible, setAdminUrl, open
   return (
     <div className="home-page">
       {/* Modal for first-time login */}
-      <Modal 
+      {/* <Modal 
         open={isModalVisible}
         onCancel={() => setIsModalVisible(false)}
         footer={null}
@@ -103,7 +103,7 @@ function Home({handleGuest, isModalVisible, setIsModalVisible, setAdminUrl, open
           <button className="modal-aims-metaflo-button" onClick={saveServerSelection("Registries")}>Registries</button>
           <button className="modal-l1-test-button" onClick={saveServerSelection("Staging / Test")}>Staging / Test</button>
         </div>
-      </Modal>
+      </Modal> */}
 
       {/* Main Image */}
       <div className="main-image">

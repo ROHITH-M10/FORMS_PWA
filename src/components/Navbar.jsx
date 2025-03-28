@@ -6,9 +6,9 @@ function Navbar({ onHomeClick, setAdminUrl, handleLogin, selectedServerOption, s
   return (
     <div className="go-to-home-nav-bar">
       <button onClick={onHomeClick} className="home-button">
-      <i className="fa fa-home"></i>
+        <i className="fa fa-home"></i>
       </button>
-      <div className="menu-container">
+      {/* <div className="menu-container">
         <i onClick={toggleServerDropdown} className="fa fa-server"></i>
         <i onClick={handleLogin} className="fa fa-user-circle"></i>
 
@@ -37,7 +37,7 @@ function Navbar({ onHomeClick, setAdminUrl, handleLogin, selectedServerOption, s
 
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }
