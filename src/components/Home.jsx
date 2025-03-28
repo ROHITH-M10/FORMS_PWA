@@ -1,12 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { Carousel, Modal } from "antd";
+import React from "react";
+import { Carousel } from "antd";
 import Footer from "./Footer";
 import Guest from "./Guest";
 import Sample_Image_1 from "../../public/images/sample_image_amrita_1.jpg";
 import Sample_Image_2 from "../../public/images/sample_image_amrita_2.jpg";
-import servers from "../data/servers.json";
+// import servers from "../data/servers.json";
 
-function Home({handleGuest, isModalVisible, setIsModalVisible, setAdminUrl, openDropdown, toggleDropdown, handleSelect, selectedUrl, selectedServerOption, setSelectedServerOption, saveServerSelection}) {
+function Home({
+  // handleGuest, 
+  // isModalVisible, 
+  // setIsModalVisible, 
+  // setAdminUrl, 
+  openDropdown, 
+  toggleDropdown, 
+  handleSelect, 
+  selectedUrl, 
+  // selectedServerOption, 
+  // setSelectedServerOption, 
+  // saveServerSelection
+}) {
 
 
 // // Check localStorage on mount
@@ -31,43 +43,43 @@ function Home({handleGuest, isModalVisible, setIsModalVisible, setAdminUrl, open
 // }
 
   // Handle Server Selection from localStorage
-  useEffect(() => {
-    const server = localStorage.getItem("server");
-    console.log("Server Selected: ", server);
-    console.log("Modal popup: ", isModalVisible);
-    if (!server && isModalVisible === false) {
-      console.log("Modal visibility setting to off since next will be second time");
-      setIsModalVisible(false); // Show modal if no selection is saved
-    }
-    else {
-      if (!server) {
-        setAdminUrl(servers[selectedServerOption]);
-        setSelectedServerOption(selectedServerOption);
-        console.log("Server selection saved: ", selectedServerOption);
+  // useEffect(() => {
+  //   const server = localStorage.getItem("server");
+  //   console.log("Server Selected: ", server);
+  //   console.log("Modal popup: ", isModalVisible);
+  //   if (!server && isModalVisible === false) {
+  //     console.log("Modal visibility setting to off since next will be second time");
+  //     setIsModalVisible(false); // Show modal if no selection is saved
+  //   }
+  //   else {
+  //     if (!server) {
+  //       setAdminUrl(servers[selectedServerOption]);
+  //       setSelectedServerOption(selectedServerOption);
+  //       console.log("Server selection saved: ", selectedServerOption);
 
-      }
-      else {
-        if (server && selectedServerOption !== server && isModalVisible === false) {
-          setAdminUrl(servers[selectedServerOption]);
-          setSelectedServerOption(selectedServerOption);
+  //     }
+  //     else {
+  //       if (server && selectedServerOption !== server && isModalVisible === false) {
+  //         setAdminUrl(servers[selectedServerOption]);
+  //         setSelectedServerOption(selectedServerOption);
 
-        }
-        else{
-      console.log("Modal visibility off");
-      console.log("Modal visibility", isModalVisible);
-      console.log("Server selection saved: ", server);
-      setIsModalVisible(false); // Hide modal if selection is saved
-      setAdminUrl(servers[server]);
-      setSelectedServerOption(server);
-      console.log("Server selection saved: ", server);
-      console.log("Admin URL: ", servers[server]);
-      // update server
-        }
-      }
+  //       }
+  //       else{
+  //     console.log("Modal visibility off");
+  //     console.log("Modal visibility", isModalVisible);
+  //     console.log("Server selection saved: ", server);
+  //     setIsModalVisible(false); // Hide modal if selection is saved
+  //     setAdminUrl(servers[server]);
+  //     setSelectedServerOption(server);
+  //     console.log("Server selection saved: ", server);
+  //     console.log("Admin URL: ", servers[server]);
+  //     // update server
+  //       }
+  //     }
 
-    }
+  //   }
 
-  }, []);
+  // }, []);
 
 
   
